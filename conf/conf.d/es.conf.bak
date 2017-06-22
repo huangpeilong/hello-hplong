@@ -1,0 +1,17 @@
+upstream elasticsearch {
+	ip_hash;
+	server 192.168.0.131; 
+	server 192.168.0.134; 
+}
+
+server {
+    listen       19200;
+    #listen       somename:8080;
+    #server_name  somename  alias  another.alias;
+
+    location / {
+         root   html;
+         index  index.html index.htm;
+	 proxy_pass http://elasticsearch;
+    }
+}

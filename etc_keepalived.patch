@@ -1,4 +1,4 @@
---- keepalived/keepalived.conf	2017-06-26 07:06:04.241403816 +0000
+--- keepalived_init/keepalived.conf	2017-06-26 07:06:04.241403816 +0000
 +++ keepalived_dest/keepalived.conf	2017-06-23 09:26:51.385317608 +0000
 @@ -1,20 +1,18 @@
  ! Configuration File for keepalived

@@ -1,6 +1,6 @@
-diff -uNr nginx_conf_init/conf.d/default_server.conf nginx_conf_dest/conf.d/default_server.conf
+diff -uNr nginx_conf_init/conf.d/default_server.conf nginx1_conf_dest/conf.d/default_server.conf
 --- nginx_conf_init/conf.d/default_server.conf	1970-01-01 00:00:00.000000000 +0000
-+++ nginx_conf_dest/conf.d/default_server.conf	2017-06-26 10:25:57.718572505 +0000
++++ nginx1_conf_dest/conf.d/default_server.conf	2017-06-27 06:33:31.599573159 +0000
 @@ -0,0 +1,15 @@
 +#
 +#default server returns 403
@@ -17,9 +17,9 @@ diff -uNr nginx_conf_init/conf.d/default_server.conf nginx_conf_dest/conf.d/defa
 +        	return 403;
 +	}
 +}
-diff -uNr nginx_conf_init/conf.d/es.conf.bak nginx_conf_dest/conf.d/es.conf.bak
+diff -uNr nginx_conf_init/conf.d/es.conf.bak nginx1_conf_dest/conf.d/es.conf.bak
 --- nginx_conf_init/conf.d/es.conf.bak	1970-01-01 00:00:00.000000000 +0000
-+++ nginx_conf_dest/conf.d/es.conf.bak	2017-06-26 10:25:57.719572504 +0000
++++ nginx1_conf_dest/conf.d/es.conf.bak	2017-06-27 06:33:31.599573159 +0000
 @@ -0,0 +1,17 @@
 +upstream elasticsearch {
 +	ip_hash;
@@ -38,9 +38,9 @@ diff -uNr nginx_conf_init/conf.d/es.conf.bak nginx_conf_dest/conf.d/es.conf.bak
 +	 proxy_pass http://elasticsearch;
 +    }
 +}
-diff -uNr nginx_conf_init/conf.d/mgtv_download.conf nginx_conf_dest/conf.d/mgtv_download.conf
+diff -uNr nginx_conf_init/conf.d/mgtv_download.conf nginx1_conf_dest/conf.d/mgtv_download.conf
 --- nginx_conf_init/conf.d/mgtv_download.conf	1970-01-01 00:00:00.000000000 +0000
-+++ nginx_conf_dest/conf.d/mgtv_download.conf	2017-06-26 10:25:57.719572504 +0000
++++ nginx1_conf_dest/conf.d/mgtv_download.conf	2017-06-27 06:33:31.600573115 +0000
 @@ -0,0 +1,107 @@
 +#
 +upstream download_ats {
@@ -149,9 +149,9 @@ diff -uNr nginx_conf_init/conf.d/mgtv_download.conf nginx_conf_dest/conf.d/mgtv_
 +	error_log   logs/error.log   debug;
 +}
 +
-diff -uNr nginx_conf_init/conf.d/mgtv_video.conf nginx_conf_dest/conf.d/mgtv_video.conf
+diff -uNr nginx_conf_init/conf.d/mgtv_video.conf nginx1_conf_dest/conf.d/mgtv_video.conf
 --- nginx_conf_init/conf.d/mgtv_video.conf	1970-01-01 00:00:00.000000000 +0000
-+++ nginx_conf_dest/conf.d/mgtv_video.conf	2017-06-26 10:25:57.719572504 +0000
++++ nginx1_conf_dest/conf.d/mgtv_video.conf	2017-06-27 06:33:31.600573115 +0000
 @@ -0,0 +1,253 @@
 +#
 +
@@ -406,9 +406,9 @@ diff -uNr nginx_conf_init/conf.d/mgtv_video.conf nginx_conf_dest/conf.d/mgtv_vid
 +        }
 +	error_log   logs/error.log   error;
 +}
-diff -uNr nginx_conf_init/conf.d/ngx_metric.conf.bk nginx_conf_dest/conf.d/ngx_metric.conf.bk
+diff -uNr nginx_conf_init/conf.d/ngx_metric.conf.bk nginx1_conf_dest/conf.d/ngx_metric.conf.bk
 --- nginx_conf_init/conf.d/ngx_metric.conf.bk	1970-01-01 00:00:00.000000000 +0000
-+++ nginx_conf_dest/conf.d/ngx_metric.conf.bk	2017-06-26 10:25:57.719572504 +0000
++++ nginx1_conf_dest/conf.d/ngx_metric.conf.bk	2017-06-27 06:33:31.600573115 +0000
 @@ -0,0 +1,26 @@
 +
 +#lua_package_path "lua/module/?.lua;;";
@@ -436,9 +436,9 @@ diff -uNr nginx_conf_init/conf.d/ngx_metric.conf.bk nginx_conf_dest/conf.d/ngx_m
 +    }
 +
 +}
-diff -uNr nginx_conf_init/nginx.conf nginx_conf_dest/nginx.conf
---- nginx_conf_init/nginx.conf	2017-06-27 03:18:07.287567964 +0000
-+++ nginx_conf_dest/nginx.conf	2017-06-26 10:25:57.720572503 +0000
+diff -uNr nginx_conf_init/nginx.conf nginx1_conf_dest/nginx.conf
+--- nginx_conf_init/nginx.conf	2017-06-27 06:33:31.601573075 +0000
++++ nginx1_conf_dest/nginx.conf	2017-06-27 06:33:31.600573115 +0000
 @@ -1,7 +1,9 @@
  
 -#user  nobody;

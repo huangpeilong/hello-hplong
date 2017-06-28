@@ -13,6 +13,7 @@ elif [ $1 == "lvs2" ]; then
 elif [ $1 == "ats1" ]; then
     # make diff file for /home/nginx/conf
     diff -uNr nginx_conf_init nginx1_conf_dest > nginx1_conf.patch
+    diff -uNr ats_etc_init ats1_etc_dest > ats1_etc.patch
 else
     echo "invalid param, please input the machine name"
 fi
